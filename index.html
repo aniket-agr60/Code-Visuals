@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sorting algorithm visualizer using D3js. It will help you to understand the algorithm. I've used swapping animation for clear understanding of the algorithm."
+    />
+    <title>CodeVisuals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">CodeVisuals</label>
+        <ul>
+          <li class="nav-item active">
+            <a class="nav-link" href=""
+              >Sorting Algo <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./searching-algorithm/"
+              >Searching Algo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#foot"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      
+    </header>
+    <!-- <p class="sound"><a id="sound" href="#">Sound 🎵</a></p> -->
+    <div class="container mt-3">
+      <h2 class="typewriter">Sorting Algorithm Visualizer</h2>
+    </div>
+
+    <br />
+    <div class="container">
+      <div class="form-inline">
+        <div class="form-group">
+          <select class="form-control" id="get-algo">
+            <option value="bubble-sort">Bubble Sort</option>
+            <option value="selection-sort">Selection Sort</option>
+          </select>
+        </div>
+
+        <div class="form-group mx-sm-3">
+          <button class="btn btn-primary" id="sort">Sort</button>
+        </div>
+        <div class="form-group">
+          <button class="btn none btn-danger" id="stop">Stop</button>
+        </div>
+      </div>
+      <br />
+
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn " id="random-data">
+            Generate Random Data
+          </button>
+        </div>
+        <div class=" col-md-3">
+          <label>
+            Speed:
+            <input
+              type="range"
+              id="speed"
+              name="speed"
+              min="100"
+              max="800"
+              value="300"
+              onchange="setSpeed()"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="bar-chart">
+        <div id="chart"></div>
+        <hr />
+      </div>
+    </div>
+    
+
+<footer class="new_footer_area bg_color" id="foot">
+  <div class="new_footer_top">
+      <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+      </div>
+  </div>
+  <div class="footer_bottom">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6 col-sm-7">
+                  <h6 class="mb-0 f_400">© 2024 All rights reserved.</h6>
+              </div>
+              <div class="col-lg-6 col-sm-5 text-right">
+                  <h6>Contact me: <a href="https://www.linkedin.com/in/aniket-agrahari-2439b5223/"><i class="fa fa-linkedin-square" style="font-size:24px"></i></a></h6>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="base.js"></script>
+    <script src="function.js"></script>
+  </body>
+</html>
